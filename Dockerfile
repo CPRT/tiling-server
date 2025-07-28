@@ -8,9 +8,7 @@ RUN apt-get update && apt-get install -y xz-utils
 # Copy the nginx configuration file
 COPY nginx.conf /etc/nginx/nginx.conf
 # add tiles
-COPY mapping_tiles.tar.xz /usr/src/app/mapping_tiles.tar.xz
-
-RUN tar -xJf mapping_tiles.tar.xz
+COPY mapping_tiles /usr/src/app/mapping_tiles
 
 # Create a directory for the cache
 RUN mkdir -p /var/cache/nginx && chown -R nginx:nginx /var/cache/nginx
