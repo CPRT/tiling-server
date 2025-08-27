@@ -3,8 +3,6 @@ FROM nginx:latest
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-RUN apt-get update && apt-get install -y xz-utils
-
 # Copy the nginx configuration file
 COPY nginx.conf /etc/nginx/nginx.conf
 # add tiles

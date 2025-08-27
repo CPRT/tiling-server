@@ -10,4 +10,4 @@ if [ "$SCRIPT_DIR" != "$CURRENT_DIR" ]; then
     cd $SCRIPT_DIR
 fi
 
-sudo docker build -t tiling-server .
+docker build -t cprtsoftware/tiling-server .
